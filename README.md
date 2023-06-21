@@ -1,19 +1,12 @@
-
-This repository contains the code and resources for the research project on "Multi-omic data in cervical cancer studies using machine learning." The aim of this research is to help the medical society identify cervical cancer subtypes using multi-omics data of the patients.
-
 # Multi-omic Data in Cervical Cancer Studies using Machine Learning
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 This repository contains code and resources for the research project titled "Multi-omic Data in Cervical Cancer Studies using Machine Learning." The aim of this research is to help the medical society identify cervical cancer subtypes using multi-omics data of the patients.
 
-## Objective
+## Aim
 
-The main objectives of our research are as follows:
-
-- To study the factors that could influence the performance of different machine learning methods and create an accurate machine learning model for predicting the subgroups of cervical cancer patients.
-- To investigate the influence of different features in predicting subgroups of cervical cancer.
-- To explore the differences between omic data and develop a more accurate machine learning model by leveraging multi-omic data instead of single-omic data.
+-Classify cervical cancer into its subgroups using machine learning model.
 
 ## Dataset
 
@@ -41,7 +34,6 @@ The repository is organized as follows:
 To run the code in this repository, you will need the following dependencies:
 
 - Python 3.x
-- Jupyter Notebook
 - NumPy
 - Pandas
 - Scikit-learn
