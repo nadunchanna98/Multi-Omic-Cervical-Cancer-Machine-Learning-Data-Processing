@@ -19,49 +19,29 @@ We utilize the TCGA (The Cancer Genome Atlas) data for our research. The followi
 - DNA Methylation Data
 
 ## Repository Structure
-├── data/ # Directory for storing TCGA data files
-│ ├── miRNA/ # Directory for miRNA genome data
-│ ├── gene_expression/ # Directory for gene expression profiling data
-│ └── DNA_methylation/ # Directory for DNA methylation data
-│
-├── notebooks/ # Jupyter notebooks for data preprocessing and analysis
-│ ├── 01_data_preprocessing.ipynb
-│ ├── 02_feature_selection.ipynb
-│ ├── 03_model_training.ipynb
-│ └── 04_evaluation.ipynb
-│
-├── models/ # Trained machine learning models
-│
-├── src/ # Source code for utility functions and modules
-│ ├── data_loader.py
-│ ├── feature_selection.py
-│ ├── model.py
-│ └── evaluation.py
-│
-├── README.md # Project overview and instructions
-└── requirements.txt # Python dependencies
 
-├── data/                # Directory for storing TCGA data files
-│   ├── miRNA/           # Directory for miRNA genome data
-│   ├── gene_expression/ # Directory for gene expression profiling data
-│   └── DNA_methylation/ # Directory for DNA methylation data
-│
-├── notebooks/           # Jupyter notebooks for data preprocessing and analysis
-│   ├── 01_data_preprocessing.ipynb
-│   ├── 02_feature_selection.ipynb
-│   ├── 03_model_training.ipynb
-│   └── 04_evaluation.ipynb
-│
-├── models/              # Trained machine learning models
-│
-├── src/                 # Source code for utility functions and modules
-│   ├── data_loader.py
-│   ├── feature_selection.py
-│   ├── model.py
-│   └── evaluation.py
-│
-├── README.md            # Project overview and instructions
-└── requirements.txt     # Python dependencies
+- data/                    # Directory for storing TCGA data files
+  - miRNA/                 # Directory for miRNA genome data
+  - gene_expression/       # Directory for gene expression profiling data
+  - DNA_methylation/       # Directory for DNA methylation data
+
+- notebooks/               # Jupyter notebooks for data preprocessing and analysis
+  - 01_data_preprocessing.ipynb
+  - 02_feature_selection.ipynb
+  - 03_model_training.ipynb
+  - 04_evaluation.ipynb
+
+- models/                  # Trained machine learning models
+
+- src/                     # Source code for utility functions and modules
+  - data_loader.py
+  - feature_selection.py
+  - model.py
+  - evaluation.py
+
+- README.md                # Project overview and instructions
+- requirements.txt         # Python dependencies
+
 
 
 ## Usage
