@@ -4,7 +4,7 @@
 
 This repository contains code and resources for the research project titled "Multi-omic Data in Cervical Cancer Studies using Machine Learning."
 
-## The aim of this research
+## Aim of this research
 
 - Classify cervical cancer into its subgroups using machine learning model.
 
