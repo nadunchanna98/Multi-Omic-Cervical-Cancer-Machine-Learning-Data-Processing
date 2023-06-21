@@ -6,7 +6,7 @@ This repository contains code and resources for the research project titled "Mul
 
 ## Aim of this research
 
-- Classify cervical cancer into its subgroups using machine learning model.
+- Develop an accurate machine learning model that can classify subgroups of cervical cancer 
 
 ## Dataset
 
