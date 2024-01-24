@@ -42,11 +42,7 @@ To run the code in this repository, you will need the following dependencies:
 
 Please refer to the individual directories for specific requirements and installation instructions.
 
-## Contributing
+## Contributors
 
-Contributions to this repository are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+- [Nadun Channa](https://github.com/nadunchanna98)
+- [Ruvindya Sachinthani](https://github.com/Ruvindya)
