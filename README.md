@@ -64,19 +64,17 @@ Adenosquamous carcinoma is a rare type of cervical cancer, involving both squamo
 
 - **Adenosquamous carcinoma**
 
----
+## Principal Component Analysis results (PCA)
 
-### Principal Component Analysis results (PCA)
-
-## Visualization of the Main Cancer Types
-
-Using PCA, we observed a clear separation between the two main cervical cancer types:
+Visualization of the Main Cancer Types. Using PCA, we observed a clear separation between the two main cervical cancer types:
 
 - **Adenocarcinoma**: This type forms its own cluster, distinct from Squamous Cell Carcinoma.
 - **Squamous Cell Carcinoma**: This type also forms a separate cluster, with minimal overlap between the two.
 
 This visualization helps confirm that the multi-omic data (DNA methylation, gene expression, and miRNA profiles) contains significant patterns that allow machine learning models to effectively distinguish between these cancer subtypes.
 
+![PCA](images/PCA1.png)
+![PCA](images/PCA2.png)
 
 ## Algorithms
 
