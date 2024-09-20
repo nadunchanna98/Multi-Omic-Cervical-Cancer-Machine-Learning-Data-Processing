@@ -18,6 +18,13 @@ Cervical cancer is one of the most commonly diagnosed cancers affecting the cerv
 
 ## Dataset
 
+### Data Integration
+![image](https://github.com/user-attachments/assets/70804c4e-ff5c-4446-a227-f3c34de2411c)
+
+### Data preprocessing
+![image](https://github.com/user-attachments/assets/77885abb-5df1-4a1e-b45f-8b10412fb1bf)
+
+
 We utilize the TCGA (The Cancer Genome Atlas) data for our research. The following omics are used:
 
 | Omic             | Type               |
@@ -100,7 +107,7 @@ However, in the resulting plots, we observed that:
 
 This visualization provides insights into the distribution of feature importance but highlights the continuous nature of the feature relevance without a clear cutoff point for feature elimination. In the Chi-Square plots, we observed that none of the features completely touched the x-axis, indicating that **all features contributed to some extent**. To determine the optimal number of features for our machine learning model, we implemented the following solution:
 
-![Feature Selection Loop](modeling_loop.Gif)
+![Feature Selection Loop](images/modeling_loop.png)
 
 1. **Iterative Feature Selection**: We looped through the ranked features, incrementally increasing the number of selected features in each iteration.
    
@@ -110,11 +117,22 @@ This visualization provides insights into the distribution of feature importance
 
 3. **Best Feature Count**: Based on this approach, we determined the **optimal number of features** that yielded the highest accuracy while avoiding overfitting or performance degradation.
 
+### Cross-Validation and Random Undersampling
 
+To ensure robust model evaluation, we used **5-fold cross-validation** during the iterative feature selection process. This allowed us to:
+- **Reduce the risk of overfitting** by training and testing the model on different subsets of the data.
+- **Ensure a more generalizable model** by validating the model on multiple partitions of the dataset.
+
+Since our dataset was imbalanced, we applied **random undersampling** to balance the classes, specifically iterating this process **10 times**. For each iteration:
+1. A new undersampled dataset was created by randomly selecting an equal number of samples from each class (e.g., Adenocarcinoma and Squamous Cell Carcinoma).
+2. The machine learning model was trained on this balanced dataset.
+3. Accuracy was recorded for each iteration.
+
+After running the **10 iterations**, we computed the **mean accuracy** across all the iterations. This ensured that the accuracy metric was **more reliable** and not dependent on any single random undersample, allowing for a more robust evaluation of the model’s performance.
 
 ## Algorithms
 
-Several machine learning algorithms were employed to classify cervical cancer subtypes based on multi-omic data. Below is a brief description of each:
+Five machine learning algorithms were employed to classify cervical cancer subtypes based on multi-omic data. Below is a brief description of each:
 
 - **Random Forest (RF)**:
   - A powerful ensemble learning method that constructs multiple decision trees and merges them to get a more accurate and stable prediction.
@@ -132,6 +150,12 @@ Several machine learning algorithms were employed to classify cervical cancer su
   - An efficient and accurate ensemble method that builds additive models in a forward stage-wise manner, optimizing differentiable loss functions.
 
 Each of these algorithms was tuned and evaluated using performance metrics such as accuracy, precision, recall, and F1-score to determine the best-performing model.
+
+## Results Comparison: Single-Omic vs Multi-Omic Data
+
+The following image visualizes a comparison between models trained on **single-omic** data versus **multi-omic** data. The multi-omic approach combines DNA methylation, gene expression, and miRNA data to provide a more comprehensive view of the biological processes involved in cervical cancer. As seen from the results, the multi-omic model significantly outperforms single-omic models, leading to improved accuracy in identifying cervical cancer subtypes.
+
+![single_multi_comparison](images/single_multi_comparison.jpg)
 
 ## Repository Structure
 
@@ -160,11 +184,7 @@ Please refer to the individual directories for specific requirements and install
 ## References
 
 - **The Cancer Genome Atlas**: [https://cancergenome.nih.gov](https://cancergenome.nih.gov)
-- **Random Forest Algorithm**: Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5-32.
-- **Support Vector Machines**: Cortes, C., & Vapnik, V. (1995). Support-vector networks. *Machine Learning*, 20(3), 273-297.
-- **K-Nearest Neighbor Algorithm**: Cover, T., & Hart, P. (1967). Nearest neighbor pattern classification. *IEEE Transactions on Information Theory*, 13(1), 21-27.
-- **Decision Trees**: Quinlan, J. R. (1986). Induction of decision trees. *Machine Learning*, 1(1), 81-106.
-- **eXtreme Gradient Boosting**: Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 785-794).
+
 
 ## Contributors
 
