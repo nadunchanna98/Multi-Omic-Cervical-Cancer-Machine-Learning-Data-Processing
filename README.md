@@ -76,6 +76,42 @@ This visualization helps confirm that the multi-omic data (DNA methylation, gene
 ![PCA](images/PCA1.png)
 ![PCA](images/PCA2.png)
 
+## Chi-Square Test for Feature Selection
+
+To assess the importance of individual features in each omic type (DNA methylation, gene expression, miRNA), we performed a **Chi-Square test**. This test helps identify the features that are most relevant for distinguishing between cervical cancer subtypes (Adenocarcinoma and Squamous Cell Carcinoma).
+
+### Visualization of Chi-Square Feature Importance
+
+We plotted the features along the **y-axis** and their corresponding **Chi-Square values** on the **x-axis**. Each omic type (DNA methylation, gene expression, miRNA) was represented separately in the graph. 
+
+DNA Methylation - Chi Squared
+![Methylation](images/DNAmethilation_chi.jpg)
+
+Gene expression - Chi Squared
+![Gene expression](images/Geneexpression_Chi.jpg)
+
+MicroRNA - Chi Squared
+![MicroRNA](images/MicroRNA_Chi.jpg)
+
+However, in the resulting plots, we observed that:
+
+- There was **no distinct point** where the graph touched the x-axis for any of the omic types.
+- This suggests that while some features were more important than others, **all features had some degree of contribution** based on their Chi-Square value, though their relevance may vary.
+
+This visualization provides insights into the distribution of feature importance but highlights the continuous nature of the feature relevance without a clear cutoff point for feature elimination. In the Chi-Square plots, we observed that none of the features completely touched the x-axis, indicating that **all features contributed to some extent**. To determine the optimal number of features for our machine learning model, we implemented the following solution:
+
+![Feature Selection Loop](modeling_loop.Gif)
+
+1. **Iterative Feature Selection**: We looped through the ranked features, incrementally increasing the number of selected features in each iteration.
+   
+2. **Model Accuracy Check**: For each subset of features, we trained a machine learning model and measured its accuracy. This allowed us to:
+    - Identify how the model's performance changes as we include more features.
+    - Find the point at which **adding more features no longer improves accuracy**.
+
+3. **Best Feature Count**: Based on this approach, we determined the **optimal number of features** that yielded the highest accuracy while avoiding overfitting or performance degradation.
+
+
+
 ## Algorithms
 
 Several machine learning algorithms were employed to classify cervical cancer subtypes based on multi-omic data. Below is a brief description of each:
