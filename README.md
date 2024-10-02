@@ -134,20 +134,13 @@ After running the **10 iterations**, we computed the **mean accuracy** across al
 
 Five machine learning algorithms were employed to classify cervical cancer subtypes based on multi-omic data. Below is a brief description of each:
 
-- **Random Forest (RF)**:
-  - A powerful ensemble learning method that constructs multiple decision trees and merges them to get a more accurate and stable prediction.
-  
-- **Support Vector Machine (SVM)**:
-  - A supervised learning model used for classification tasks by finding the hyperplane that best separates the data into different classes.
-  
-- **K-Nearest Neighbor (KNN)**:
-  - A non-parametric method that classifies instances based on the majority vote of their nearest neighbors.
-  
-- **Decision Tree (DT)**:
-  - A simple and interpretable model that splits the data into subsets based on the feature that provides the most information gain.
-  
-- **eXtreme Gradient Boosting (XGB)**:
-  - An efficient and accurate ensemble method that builds additive models in a forward stage-wise manner, optimizing differentiable loss functions.
+
+- **Support Vector Machine (SVM)**
+- **K-Nearest Neighbor (KNN)**
+- **Decision Tree (DT)**
+- **Random Forest (RF)**
+- **eXtreme Gradient Boosting (XGB)**
+
 
 Each of these algorithms was tuned and evaluated using performance metrics such as accuracy, precision, recall, and F1-score to determine the best-performing model.
 
